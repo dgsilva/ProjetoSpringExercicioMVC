@@ -1,6 +1,7 @@
 package br.com.mvc.projeto.entities;
 
 public class Produto {
+	
 	private Integer idProduto;
 	private String nome;
 	private Integer quantidade;
