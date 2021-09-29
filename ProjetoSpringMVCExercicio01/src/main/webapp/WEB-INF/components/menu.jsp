@@ -18,7 +18,7 @@
 						Gerenciar Minhas Tarefas </a>
 					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<li><a class="dropdown-item" href="/ProjetoSpringMVCExercicio01/cadastro-produto">Cadastro Produto</a></li>
-						<li><a class="dropdown-item" href="/ProjetoSpringMVCExercicio01/consulta-tarefa">Consultar Produtos</a></li>
+						<li><a class="dropdown-item" href="/ProjetoSpringMVCExercicio01/consulta-produto">Consultar Produtos</a></li>
 						<li><hr class="dropdown-divider"></li>
 						<li><a class="dropdown-item" href="/ProjetoSpringMVCExercicio01/relatorio-tarefa">Relatório de Produtos</a></li>
 					</ul></li>

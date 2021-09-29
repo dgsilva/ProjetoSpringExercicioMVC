@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -12,6 +12,7 @@
 <body>
 
 	<jsp:include page="/WEB-INF/components/menu.jsp" />
+	<jsp:include page="/WEB-INF/components/mensagens.jsp" />
 
 	<div class="container mt-3">
 

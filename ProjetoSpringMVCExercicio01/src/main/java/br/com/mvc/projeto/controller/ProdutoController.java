@@ -49,19 +49,19 @@ public class ProdutoController {
 			
 			IProdutoRepository.create(produto);
 			
-			modelAndView.addObject("mensagem", "Produto cadastrado com sucesso.");
+			modelAndView.addObject("mensagem_sucesso", "Produto cadastrado com sucesso.");
 			
 		}catch (Exception e) {
-			modelAndView.addObject("mensagem", e.getMessage());
+			modelAndView.addObject("mensagem_erro", e.getMessage());
 		}
 		return modelAndView;
 		
 	}
 	
 	
-	@RequestMapping(value="consulta-tarefa")
+	@RequestMapping(value="consulta-produto")
 	public ModelAndView consultar(HttpServletResponse response) throws IOException{
-		return new ModelAndView("consulta-tarefa");
+		return new ModelAndView("consulta-produto");
 	}
 	
 	@RequestMapping(value="edicao-tarefa")
