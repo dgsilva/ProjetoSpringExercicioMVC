@@ -64,15 +64,7 @@ public class ProdutoRepository implements IProdutoRepository {
 		List<Produto> lista = jdbcTemplate.query(query, new RowMapper<Produto>() {
 			@Override
 			public Produto mapRow(ResultSet rs, int rowNum) throws SQLException {
-				Produto produto = new Produto();
-
-				produto.setIdProduto(rs.getInt("idProduto"));
-				produto.setNome(rs.getString("nome"));
-				produto.setQuantidade(rs.getInt("quantidade"));
-				produto.setPreco(rs.getDouble("preco"));
-				produto.setDescricao(rs.getString("descricao"));
-
-				return produto;
+				return getProduto(rs);
 			}
 		});
 		return lista;
@@ -84,18 +76,10 @@ public class ProdutoRepository implements IProdutoRepository {
 		
 		Object[] params = { id };
 		
-		List<Produto> lista = jdbcTemplate.query(query, new RowMapper<Produto>() {
+		List<Produto> lista = jdbcTemplate.query(query,params, new RowMapper<Produto>() {
 			@Override
 			public Produto mapRow(ResultSet rs, int rowNum) throws SQLException {
-				Produto produto = new Produto();
-
-				produto.setIdProduto(rs.getInt("idProduto"));
-				produto.setNome(rs.getString("nome"));
-				produto.setQuantidade(rs.getInt("quantidade"));
-				produto.setPreco(rs.getDouble("preco"));
-				produto.setDescricao(rs.getString("descricao"));
-
-				return produto;
+				return getProduto(rs);
 			}
 		});
 		

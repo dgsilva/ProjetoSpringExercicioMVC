@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.mvc.projeto.dto.ProdutoCadastroDTO;
+import br.com.mvc.projeto.dto.ProdutoConsultaDTO;
 import br.com.mvc.projeto.entities.Produto;
 import br.com.mvc.projeto.repositories.IProdutoRepository;
 
@@ -59,10 +60,35 @@ public class ProdutoController {
 	}
 	
 	
-	@RequestMapping(value="consulta-produto")
+	@RequestMapping(value="/consulta-produto")
 	public ModelAndView consultar(HttpServletResponse response) throws IOException{
-		return new ModelAndView("consulta-produto");
+		
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.addObject("dto" , new ProdutoConsultaDTO());
+		
+		return modelAndView;
 	}
+
+
+	@RequestMapping(value="/consulta-produto", method = RequestMethod.GET )
+	public ModelAndView consultarProduto(ProdutoConsultaDTO dto) throws IOException{
+		
+		ModelAndView modelAndView = new ModelAndView("consulta-produto");
+		
+		try {
+			
+			modelAndView.addObject("produtos", IProdutoRepository.getAll());
+			
+		}catch (Exception e) {
+			modelAndView.addObject("produtos", e.getMessage());
+		}
+		
+		
+		
+		return modelAndView;
+	}
+	
+	
 	
 	@RequestMapping(value="edicao-tarefa")
 	public ModelAndView edicao(HttpServletResponse response) throws IOException{
