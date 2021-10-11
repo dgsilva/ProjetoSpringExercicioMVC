@@ -12,8 +12,10 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import br.com.mvc.projeto.repositories.IProdutoRepository;
+import br.com.mvc.projeto.interfaces.IProdutoRepository;
+import br.com.mvc.projeto.interfaces.IUsuarioRepository;
 import br.com.mvc.projeto.repositories.ProdutoRepository;
+import br.com.mvc.projeto.repositories.UsuarioRepository;
 
 @Configuration
 @ComponentScan(basePackages="br.com.mvc.projeto")
@@ -48,5 +50,10 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter{
 	@Bean
 	public IProdutoRepository getProduto() {
 		return new ProdutoRepository(getDataSource());
+	}
+	
+	@Bean
+	public IUsuarioRepository getUsuario() {
+		return new UsuarioRepository(getDataSource());
 	}
 }

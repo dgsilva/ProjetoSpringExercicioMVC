@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
 import br.com.mvc.projeto.entities.Produto;
+import br.com.mvc.projeto.interfaces.IProdutoRepository;
 
 public class ProdutoRepository implements IProdutoRepository {
 	private JdbcTemplate jdbcTemplate;

@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 import br.com.mvc.projeto.dto.ProdutoCadastroDTO;
 import br.com.mvc.projeto.dto.ProdutoConsultaDTO;
 import br.com.mvc.projeto.entities.Produto;
-import br.com.mvc.projeto.repositories.IProdutoRepository;
+import br.com.mvc.projeto.interfaces.IProdutoRepository;
 
 @Controller
 public class ProdutoController {

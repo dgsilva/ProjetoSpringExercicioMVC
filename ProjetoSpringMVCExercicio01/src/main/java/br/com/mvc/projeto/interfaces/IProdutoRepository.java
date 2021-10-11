@@ -1,7 +1,6 @@
-package br.com.mvc.projeto.repositories;
+package br.com.mvc.projeto.interfaces;
 
 import br.com.mvc.projeto.entities.Produto;
-import br.com.mvc.projeto.interfaces.IBaseRepositories;
 
 public interface IProdutoRepository extends IBaseRepositories<Produto, Integer> {
 

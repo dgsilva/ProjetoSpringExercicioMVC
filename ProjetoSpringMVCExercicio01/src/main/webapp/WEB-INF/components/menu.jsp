@@ -26,3 +26,12 @@
 		</div>
 	</div>
 </nav>
+
+<div class="row container mt-2">
+	<div class="col-md-12 text-end">
+		Usuário autenticado: <strong>${usuario_autenticado.nome}</strong>, 
+		email: <strong>${usuario_autenticado.email}</strong>
+		&nbsp;&nbsp; 
+		<a href="/ProjetoSpringMVCExercicio01/" class="btn btn-outline-danger btn-sm">Sair do Sistema</a>
+	</div>
+</div>
